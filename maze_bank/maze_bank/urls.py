@@ -25,3 +25,5 @@ urlpatterns = [
     path('', include('mazebank.urls'))
 ]
 
+handler404 = pageNotFound
+
