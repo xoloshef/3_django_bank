@@ -22,3 +22,7 @@
     
     pip list
     django-admin list
+
+### Работа с БД
+    python manage.py sqlmigrate mazebank 0001
+    python manage.py migrate
