@@ -14,7 +14,7 @@ class Women(models.Model):
 """
 class Bank(models.Model):
     title = models.CharField(max_length=255)
-    money_balance = models.DecimalField
+    money_balance = models.DecimalField()
     money_transfer_create = models.DateTimeField(auto_now_add=True)
     money_transfer_update = models.DateTimeField(auto_now=True)
 #необходимо прописать константы ImageField MEDIA_ROOT, MEDIA_URL
