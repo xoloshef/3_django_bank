@@ -55,3 +55,8 @@ pk - индификатор записи
 # objects
 
     Bank.objects
+
+# починка
+    
+    python manage.py makemigrations
+    python manage.py migrate
