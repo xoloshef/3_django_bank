@@ -1,11 +1,20 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
 
+menu = ["О сайте", "Оформить карту", "Переводы", "Обратная связь", "Войти"]
 
+"""
 # Create your views here.
 
-def index(request): #HttpRequest
-    return HttpResponse("Страница приложения mazebank.")
+#def index(request): #HttpRequest
+#    return HttpResponse("Страница приложения mazebank.")
+"""
+
+def index(request):
+    return render(request, 'mazebank/index.html', {'menu' : menu})
+
+def about(request):
+    return render(request, 'mazebank/about.html', {'title': 'О сайте'})
 
 def categories(request, catid):
     if (request.GET):

@@ -11,7 +11,7 @@
     cd .\maze_bank\
     python manage.py runserver
 
-### venv
+### venv !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     .\venv\Scripts\activate
     cd .\maze_bank\
     python manage.py runserver
