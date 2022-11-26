@@ -12,9 +12,13 @@ class Women(models.Model):
     time_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
 """
+
 class Bank(models.Model):
     title = models.CharField(max_length=255)
     #money_balance = models.DecimalField()
     money_transfer_create = models.DateTimeField(auto_now_add=True)
     money_transfer_update = models.DateTimeField(auto_now=True)
 #необходимо прописать константы ImageField MEDIA_ROOT, MEDIA_URL
+
+    def __str__(self):
+        return self.title

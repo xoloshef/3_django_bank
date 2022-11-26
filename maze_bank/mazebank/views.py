@@ -1,6 +1,8 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
 
+from .models import *
+
 menu = ["О сайте", "Оформить карту", "Переводы", "Обратная связь", "Войти"]
 
 """
@@ -11,10 +13,40 @@ menu = ["О сайте", "Оформить карту", "Переводы", "О�
 """
 
 def index(request):
-    return render(request, 'mazebank/index.html', {'menu' : menu})
+    basedata = Bank.objects.all()
+    return render(request, 'mazebank/index.html', {'basedate': basedata, 'menu' : menu, 'title': 'Главная страница'})
 
 def about(request):
-    return render(request, 'mazebank/about.html', {'title': 'О сайте'})
+    return render(request, 'mazebank/about.html', {'menu' : menu, 'title': 'О сайте'})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def categories(request, catid):
     if (request.GET):

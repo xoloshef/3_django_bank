@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная страница</title>
-</head>
-<body>
+{% extends 'mazebank/base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
 
 <ul>
-{% for m in menu %}
-<li>{{m}}</li>
-{% endfor %}
+    {% for m in basedata %}
+    <li>
+        <h2>{{p.title}}</h2>
+        <p>{{p.content}}</p>
+    </li>
+    {% endfor %}
 </ul>
 
-</body>
-</html>
+
+{% endblock %}
