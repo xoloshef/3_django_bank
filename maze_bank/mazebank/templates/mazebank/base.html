@@ -4,11 +4,13 @@
     представление страниц на сайте в целом, а уже потом он рсширяется шаблонами отдельных страниц
     "это типо наследование шаблонов"
 -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
    <!-- заголовок -->
     <title>{{title}}</title>
+    <link type="text/css" href="{% static 'mazebank/css/style.css' %}", rel="stylesheet" />
 </head>
 <body>
     <!-- Блок меню -->
