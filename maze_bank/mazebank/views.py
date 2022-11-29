@@ -19,6 +19,26 @@ def index(request):
 def about(request):
     return render(request, 'mazebank/about.html', {'menu' : menu, 'title': 'О сайте'})
 
+def login(request):
+    return render(request, 'mazebank/more/login.html', {'menu' : menu, 'title': 'Вход'})
+
+def register(request):
+    return render(request, 'mazebank/more/register.html', {'menu' : menu, 'title': 'Регистрация'})
+
+def dontpassword(request):
+    return render(request, 'mazebank/more/dontpassword.html', {'menu' : menu})
+
+#доступное клиентам банка (client)
+def client_index(request):
+    return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
+
+#доступное админу (инженер)
+
+#доступное сотруднику банка (служащий)
+
+
+
+
 
 
 
