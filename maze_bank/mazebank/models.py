@@ -13,12 +13,24 @@ class Women(models.Model):
     is_published = models.BooleanField(default=True)
 """
 
-class Bank(models.Model):
+class Bank_users(models.Model):
     title = models.CharField(max_length=255)
     #money_balance = models.DecimalField()
     money_transfer_create = models.DateTimeField(auto_now_add=True)
     money_transfer_update = models.DateTimeField(auto_now=True)
 #необходимо прописать константы ImageField MEDIA_ROOT, MEDIA_URL
+
+class Bank_client(models.Model):
+    title = models.CharField(max_length=255)
+    # money_balance = models.DecimalField()
+    money_transfer_create = models.DateTimeField(auto_now_add=True)
+    money_transfer_update = models.DateTimeField(auto_now=True)
+
+class Bank_admins(models.Model):
+    title = models.CharField(max_length=255)
+    # money_balance = models.DecimalField()
+    money_transfer_create = models.DateTimeField(auto_now_add=True)
+    money_transfer_update = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title

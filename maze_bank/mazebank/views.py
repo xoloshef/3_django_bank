@@ -32,10 +32,20 @@ def dontpassword(request):
 def client_index(request):
     return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
 
+def client_action_bank_account(request):
+    return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
+
+def client_bank_transfers(request):
+    return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
+
+def client_new_bank_account(request):
+    return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
+
 #доступное админу (инженер)
 
 #доступное сотруднику банка (служащий)
 
+#В случае ошибок страница
 
 
 
