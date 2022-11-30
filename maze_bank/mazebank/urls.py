@@ -16,9 +16,13 @@ urlpatterns = [
     path('login/dontpassword.html/', dontpassword, name='dontpassword'),
 
     path('client_index/', client_index, name='client_index'),
+    path('client/index.html', client_index, name='client_index'),
+    path('client/bank_transfers/', client_bank_transfers, name='bank_transfers'),
+    path('client/action_bank_account/', client_action_bank_account, name='action_bank_account'),
+    path('client/new_bank_account/', client_new_bank_account, name='new_bank_account'),
 
-
-
+    path('worker/worker_index/',worker_index, name='worker_index'),
+    path('admin/admin_index/', admin_index, name='admin_index'),
 
 
     path('about/', about, name='about'),

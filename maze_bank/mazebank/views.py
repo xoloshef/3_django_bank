@@ -13,8 +13,8 @@ menu = ["О сайте", "Оформить карту", "Переводы", "О�
 """
 
 def index(request):
-    basedata = Bank.objects.all()
-    return render(request, 'mazebank/index.html', {'basedate': basedata, 'menu' : menu, 'title': 'Главная страница'})
+    #basedata = Bank.objects.all()
+    return render(request, 'mazebank/index.html', {''' 'baedate': basedata,''' 'menu' : menu, 'title': 'Главная страница'})
 
 def about(request):
     return render(request, 'mazebank/about.html', {'menu' : menu, 'title': 'О сайте'})
@@ -33,17 +33,21 @@ def client_index(request):
     return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
 
 def client_action_bank_account(request):
-    return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
+    return render(request, 'mazebank/bank_client/action_bank_account.html', {'menu' : menu})
 
 def client_bank_transfers(request):
-    return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
+    return render(request, 'mazebank/bank_client/bank_transfers.html', {'menu' : menu})
 
 def client_new_bank_account(request):
-    return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
+    return render(request, 'mazebank/bank_client/new_bank_account.html', {'menu' : menu})
 
 #доступное админу (инженер)
+def admin_index(request):
+    return render(request, 'mazebank/bank_admin/admin_index.html', {'menu' : menu})
 
 #доступное сотруднику банка (служащий)
+def worker_index(request):
+    return render(request, 'mazebank/bank_admin/worker_index.html', {'menu' : menu})
 
 #В случае ошибок страница
 
