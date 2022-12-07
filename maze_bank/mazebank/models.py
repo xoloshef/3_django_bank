@@ -13,24 +13,22 @@ class Women(models.Model):
     is_published = models.BooleanField(default=True)
 """
 
-class Bank_users(models.Model):
-    title = models.CharField(max_length=255)
-    #money_balance = models.DecimalField()
-    money_transfer_create = models.DateTimeField(auto_now_add=True)
-    money_transfer_update = models.DateTimeField(auto_now=True)
-#необходимо прописать константы ImageField MEDIA_ROOT, MEDIA_URL
-"""
-class Bank_client(models.Model):
-    title = models.CharField(max_length=255)
-    # money_balance = models.DecimalField()
-    money_transfer_create = models.DateTimeField(auto_now_add=True)
-    money_transfer_update = models.DateTimeField(auto_now=True)
+class Users(models.Model):
+    #id - django само
+    #local_id = models.DecimalField(max_digits=5, decimal_places=0) # локальный id для подтвержденных users(пользователей)
+    username = models.CharField(max_length=255, default='ЧеловекОшибка') # имя пользователя
+    role = models.CharField(max_length=255, default='client') # роль (client, worker, admin(он же инженер))
+    activity = models.BooleanField(default=True) # статус подтвержденности пользователя
 
-class Bank_admins(models.Model):
-    title = models.CharField(max_length=255)
-    # money_balance = models.DecimalField()
-    money_transfer_create = models.DateTimeField(auto_now_add=True)
-    money_transfer_update = models.DateTimeField(auto_now=True)
-"""
+
+class Client(models.Model):
+    #id - django само
+    username = models.CharField(max_length=255, default='ЧеловекОшибка') # имя пользователя
+    cards = models.CharField(max_length=255, default=None) # банковские карты (debit, credit)
+    balance_debit = models.DecimalField(max_digits=10, decimal_places=2, default=0) # максимум на балансе 99 999 999, 99
+    balance_credit = models.DecimalField(max_digits=7, decimal_places=2, default=0) # максимум на балансе кредитки 99 999, 99
+    #money_transfer_create = models.DateTimeField(auto_now_add=True)
+    #money_transfer_update = models.DateTimeField(auto_now=True)
+
      #def __str__(self):
      #   return self.title
