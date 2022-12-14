@@ -1,4 +1,4 @@
-# 3_django_bank
+pip install virtualenv  # 3_django_bank
 
 ### Quit the server with CTRL-BREAK.
 

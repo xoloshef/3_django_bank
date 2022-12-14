@@ -5,12 +5,7 @@ from .models import *
 
 menu = ["О сайте", "Оформить карту", "Переводы", "Обратная связь", "Войти"]
 
-"""
-# Create your views here.
 
-#def index(request): #HttpRequest
-#    return HttpResponse("Страница приложения mazebank.")
-"""
 
 def index(request):
     #basedata = Bank.objects.all()
@@ -20,6 +15,10 @@ def about(request):
     return render(request, 'mazebank/about.html', {'menu' : menu, 'title': 'О сайте'})
 
 def login(request):
+    return render(request, 'mazebank/registration/login.html', {'menu' : menu, 'title': 'Вход'})
+
+"""
+def login(request):
     return render(request, 'mazebank/more/login.html', {'menu' : menu, 'title': 'Вход'})
 
 def register(request):
@@ -27,7 +26,7 @@ def register(request):
 
 def dontpassword(request):
     return render(request, 'mazebank/more/dontpassword.html', {'menu' : menu})
-
+"""
 #доступное клиентам банка (client)
 def client_index(request):
     return render(request, 'mazebank/bank_client/client_index.html', {'menu' : menu})
