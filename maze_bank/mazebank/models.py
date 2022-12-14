@@ -12,7 +12,7 @@ class Women(models.Model):
     time_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
 """
-
+"""
 class Users(models.Model):
     #id - django само
     #local_id = models.DecimalField(max_digits=5, decimal_places=0) # локальный id для подтвержденных users(пользователей)
@@ -32,3 +32,4 @@ class Client(models.Model):
 
      #def __str__(self):
      #   return self.title
+"""
